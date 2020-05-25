@@ -40,3 +40,9 @@ set ruler
 set number
 set viminfo='20,<1000 " inc copy/paste-buffer
 set tags=./.git/tags; " where to find ctags
+
+" Vim pane switching
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l

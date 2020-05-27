@@ -37,7 +37,6 @@ let g:formatters_python=['black']
 " Set additional vim options
 set encoding=utf-8
 set ruler
-set number
 set viminfo='20,<1000 " inc copy/paste-buffer
 set tags=./.git/tags; " where to find ctags
 
@@ -46,3 +45,13 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Hybrid line numbers
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+

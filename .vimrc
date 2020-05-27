@@ -10,6 +10,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'mileszs/ack.vim'
 Plugin 'crusoexia/vim-monokai'
+Plugin 'tpope/vim-surround'
 
 " Additional config for vundle
 call vundle#end()

@@ -33,6 +33,7 @@ let g:autoformat_remove_trailing_spaces = 0
 
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
+nnoremap <space> za
 
 " Use black formatter
 let g:formatters_python=['black']

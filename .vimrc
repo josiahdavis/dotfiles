@@ -8,9 +8,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'mileszs/ack.vim'
 Plugin 'crusoexia/vim-monokai'
-Plugin 'tpope/vim-surround'
+Plugin 'preservim/nerdtree'
+Plugin 'itchyny/lightline.vim'
+Plugin 'zxqfl/tabnine-vim'
+
 
 " Additional config for vundle
 call vundle#end()

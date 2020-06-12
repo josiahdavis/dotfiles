@@ -42,7 +42,17 @@ let g:formatters_python=['black']
 set encoding=utf-8
 set ruler
 set viminfo='20,<1000 " inc copy/paste-buffer
-set tags=./.git/tags; " where to find ctags
+set tags=./.git/tags; " where to find ctags normally
+set tags+=tags;/      " where to find ctags in ad-hoc package exploration
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab " Convert from tab char to spaces
+set noerrorbells
+set smarttab
+set nowrap
+set incsearch
+set colorcolumn=88
+
 
 " Vim pane switching
 map <C-j> <C-W>j
@@ -59,3 +69,6 @@ map <C-l> <C-W>l
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+" Shifting code blocks in visual mode 
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv

@@ -18,6 +18,9 @@ call vundle#end()
 filetype plugin indent on
 set shell=/bin/bash
 
+" Setting the leader
+let mapleader="\<Space>"
+
 " Color
 syntax enable
 silent! colorscheme monokai

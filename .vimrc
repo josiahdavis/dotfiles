@@ -59,8 +59,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Pane creation
-map <C-v> <C-W>v " side-by-side
-map <C-s> <C-W>s " vertical
+nnoremap <Leader>v <C-W>v " side-by-side
+nnoremap <Leader>s <C-W>s " vertical 
 
 " Hybrid line numbers
 :set number relativenumber

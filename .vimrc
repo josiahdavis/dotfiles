@@ -21,6 +21,11 @@ set shell=/bin/bash
 " Setting the leader
 let mapleader="\<Space>"
 
+" Easier writing/quitting
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x :x<CR>
+nnoremap <Leader>q :q<CR>
+
 " Color
 syntax enable
 silent! colorscheme monokai

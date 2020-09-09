@@ -8,7 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'crusoexia/vim-monokai'
+Plugin 'morhetz/gruvbox'
 Plugin 'preservim/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'zxqfl/tabnine-vim'
@@ -27,8 +27,15 @@ nnoremap <Leader>x :x<CR>
 nnoremap <Leader>q :q<CR>
 
 " Color
+let g:gruvbox_contrast_dark = 'hard'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
 syntax enable
-silent! colorscheme monokai
+colorscheme gruvbox
+set background=dark
 
 " Apply formatter on save
 au BufWrite * :Autoformat

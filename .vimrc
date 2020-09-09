@@ -76,9 +76,15 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Searching
-map <C-t> :noh<CR> " unhighlight
+map <C-t> :noh<CR>
 set hlsearch
 set incsearch
+
+" `<Tab>`/`<S-Tab>` to move between matches without leaving incremental search.
+" Note dependency on `'wildcharm'` being set to `<C-z>` in order for this to
+" work.
+cnoremap <expr> <Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>/<C-r>/' : '<C-z>'
+cnoremap <expr> <S-Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>?<C-r>/' : '<S-Tab>'
 
 " Nerdtree open/close toggle
 map <C-o> :NERDTreeToggle<CR>

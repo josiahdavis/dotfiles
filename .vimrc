@@ -47,7 +47,8 @@ let g:autoformat_remove_trailing_spaces = 0
 
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
-nnoremap <space> za
+nnoremap <CR> za
+nnoremap <expr> <Tab> &foldlevel ? 'zM' :'zR'
 
 " Use black formatter
 let g:formatters_python=['black']
@@ -76,7 +77,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Searching
-map <C-t> :noh<CR>
+" map <C-t> :noh<CR>
+cnoremap <C-t> :noh<CR>
 set hlsearch
 set incsearch
 

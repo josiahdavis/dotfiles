@@ -71,6 +71,11 @@ map <C-l> <C-W>l
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Searching
+map <C-t> :noh<CR> " unhighlight
+set hlsearch
+set incsearch
+
 " Nerdtree open/close toggle
 map <C-o> :NERDTreeToggle<CR>
 
@@ -89,5 +94,4 @@ set expandtab " Convert from tab char to spaces
 set noerrorbells
 set smarttab
 set nowrap
-set incsearch
 set colorcolumn=88

@@ -82,6 +82,9 @@ map <C-o> :NERDTreeToggle<CR>
 " Lightline status line
 set laststatus=2
 
+" Avoid unintentional switches to Ex mode.
+nnoremap Q <nop>
+
 " Additional vim options
 set encoding=utf-8
 set ruler

@@ -1,23 +1,15 @@
-" Required configuration for vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" Specify plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'morhetz/gruvbox'
-Plugin 'preservim/nerdtree'
-Plugin 'itchyny/lightline.vim'
-Plugin 'zxqfl/tabnine-vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'tmhedberg/SimpylFold'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'zxqfl/tabnine-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
 
-" Additional config for vundle
-call vundle#end()
-filetype plugin indent on
 set shell=/bin/bash
 
 " Setting the leader

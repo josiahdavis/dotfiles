@@ -22,6 +22,7 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>r :so %:CR>
 
 " Color
 let g:gruvbox_contrast_dark = 'hard'
@@ -73,7 +74,7 @@ nnoremap <Leader>s <C-W>s " vertical
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Searching
+" Searching within a file
 map <C-t> :noh<CR>
 set hlsearch
 set incsearch
@@ -83,6 +84,9 @@ set incsearch
 " work.
 cnoremap <expr> <Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>/<C-r>/' : '<C-z>'
 cnoremap <expr> <S-Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>?<C-r>/' : '<S-Tab>'
+
+" Searching for a file
+nnoremap <C-f> :Files<Cr>
 
 " Nerdtree open/close toggle
 map <C-n> :NERDTreeToggle<CR>

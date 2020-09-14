@@ -12,6 +12,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'preservim/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'zxqfl/tabnine-vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 
 " Additional config for vundle
 call vundle#end()
@@ -20,6 +22,9 @@ set shell=/bin/bash
 
 " Setting the leader
 let mapleader="\<Space>"
+
+" set rtp+=~/.fzf 
+set rtp+=/usr/local/opt/fzf
 
 " Easier writing/quitting
 nnoremap <Leader>w :w<CR>
@@ -48,7 +53,7 @@ let g:autoformat_remove_trailing_spaces = 0
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
 nnoremap <CR> za
-nnoremap <expr> <Tab> &foldlevel ? 'zM' :'zR'
+" nnoremap <expr> <S-CR> &foldlevel ? 'zM' :'zR'
 
 " Use black formatter
 let g:formatters_python=['black']
@@ -77,8 +82,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Searching
-" map <C-t> :noh<CR>
-cnoremap <C-t> :noh<CR>
+map <C-t> :noh<CR>
 set hlsearch
 set incsearch
 
@@ -89,7 +93,7 @@ cnoremap <expr> <Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>/<C-r>
 cnoremap <expr> <S-Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>?<C-r>/' : '<S-Tab>'
 
 " Nerdtree open/close toggle
-map <C-o> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Lightline status line
 set laststatus=2

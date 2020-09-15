@@ -87,6 +87,7 @@ cnoremap <expr> <S-Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>?<C-
 
 " Searching for a file
 nnoremap <C-f> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>
 
 " Nerdtree open/close toggle
 map <C-n> :NERDTreeToggle<CR>

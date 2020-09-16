@@ -10,7 +10,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-set shell=/bin/bash
+set shell=/bin/zsh
 
 " Setting the leader
 let mapleader="\<Space>"
@@ -22,7 +22,7 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>r :so %:CR>
+nnoremap <Leader>r :so %<CR>
 
 " Color
 let g:gruvbox_contrast_dark = 'hard'
@@ -56,6 +56,17 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Terminal emulator settings
+tmap <C-j> <C-W>j
+tmap <C-k> <C-W>k
+tmap <C-h> <C-W>h
+tmap <C-l> <C-W>l
+set splitbelow
+set termsize=10x0
+nnoremap <Leader>t :terminal<CR>
+
+tnoremap <Leader>q <C-\><C-N>:q!<CR>
 
 " Pane creation
 nnoremap <Leader>v <C-W>v " side-by-side

@@ -74,7 +74,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source $HOME/.bash_profile
+if [ -f $HOME/.bash_profile ]; then
+    source $HOME/.bash_profile
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

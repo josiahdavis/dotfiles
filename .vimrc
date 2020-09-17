@@ -23,6 +23,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>r :so %<CR>
+nnoremap <Leader>e :e<CR>
 
 " Color
 let g:gruvbox_contrast_dark = 'hard'

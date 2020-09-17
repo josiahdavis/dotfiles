@@ -72,6 +72,10 @@ tnoremap <Leader>q <C-\><C-N>:q!<CR>
 nnoremap <Leader>v <C-W>v " side-by-side
 nnoremap <Leader>s <C-W>s " vertical 
 
+" Pane resizing
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
 " Hybrid line numbers
 :set number relativenumber
 
@@ -86,7 +90,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Searching within a file
-map <C-t> :noh<CR>
+"nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
 set hlsearch
 set incsearch
 

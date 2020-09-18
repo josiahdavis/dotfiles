@@ -64,7 +64,7 @@ tmap <C-k> <C-W>k
 tmap <C-h> <C-W>h
 tmap <C-l> <C-W>l
 set splitbelow
-set termwinsize=20x0
+" set termwinsize=20x0
 nnoremap <Leader>t :terminal<CR>
 
 tnoremap <Leader>q <C-\><C-N>:q!<CR>

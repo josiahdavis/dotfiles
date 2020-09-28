@@ -8,6 +8,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'zxqfl/tabnine-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 set shell=/bin/zsh

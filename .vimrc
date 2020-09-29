@@ -18,7 +18,6 @@ set shell=/bin/zsh
 " Setting the leader
 let mapleader="\<Space>"
 
-" set rtp+=~/.fzf 
 set rtp+=/usr/local/opt/fzf
 
 " Easier writing/quitting
@@ -60,17 +59,6 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" Terminal emulator settings
-tmap <C-j> <C-W>j
-tmap <C-k> <C-W>k
-tmap <C-h> <C-W>h
-tmap <C-l> <C-W>l
-set splitbelow
-" set termwinsize=20x0
-nnoremap <Leader>t :terminal<CR>
-
-tnoremap <Leader>q <C-\><C-N>:q!<CR>
 
 " Pane creation
 nnoremap <Leader>v <C-W>v " side-by-side

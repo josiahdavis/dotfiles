@@ -9,6 +9,7 @@ Plug 'zxqfl/tabnine-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

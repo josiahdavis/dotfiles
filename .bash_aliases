@@ -8,6 +8,7 @@ alias check_start="vim /var/log/cloud-init-output.log"
 alias c='clear'
 alias make_ctags='ctags -R -f ./.git/tags .'
 alias a='tmux attach'
+alias gs="git status"
 
 mcd(){
   mkdir -p $1 && cd $1

@@ -28,6 +28,10 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>r :so %<CR>
 nnoremap <Leader>e :e<CR>
 
+" Line insertion in normal mode
+nnoremap <Leader>O O<Esc>
+nnoremap <Leader>o o<Esc>
+
 " Color
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')

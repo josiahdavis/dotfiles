@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -20,6 +21,20 @@ set shell=/bin/zsh
 let mapleader="\<Space>"
 
 set rtp+=/usr/local/opt/fzf
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+" Symbol renaming.
+nmap <Leader>rn <Plug>(coc-rename)
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocActionAsync('doHover')
+  endif
+endfunction
 
 " Easier writing/quitting
 nnoremap <Leader>w :w<CR>

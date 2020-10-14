@@ -140,3 +140,4 @@ set noerrorbells
 set smarttab
 set nowrap
 set colorcolumn=88
+set cursorline

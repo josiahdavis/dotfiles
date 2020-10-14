@@ -69,7 +69,7 @@ let g:autoformat_remove_trailing_spaces = 0
 
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
-nnoremap <Tab> za
+" nnoremap <Tab> za
 " nnoremap <expr> <S-CR> &foldlevel ? 'zM' :'zR'
 
 " Use black formatter

@@ -137,6 +137,8 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab " Convert from tab char to spaces
 set noerrorbells
+set visualbell
+set t_vb=
 set smarttab
 set nowrap
 set colorcolumn=88

@@ -7,6 +7,7 @@
 	templatedir = ~/.git_template
 [alias]
     co = checkout
+    st = status
 	ctags = !.git/hooks/ctags
 
     lol = log --oneline --graph --decorate

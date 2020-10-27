@@ -6,4 +6,10 @@
 [init]
 	templatedir = ~/.git_template
 [alias]
+    co = checkout
 	ctags = !.git/hooks/ctags
+
+    lol = log --oneline --graph --decorate
+    lola = log --oneline --graph --decorate --all
+    lols = log --oneline --graph --decorate --all --max-count=10
+    lolf = log --oneline --graph --decorate dev..

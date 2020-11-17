@@ -44,6 +44,9 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>r :so %<CR>
 nnoremap <Leader>e :e<CR>
 
+" Copy to the system clipboard
+vnoremap <Leader>y "+y
+
 " Line insertion in normal mode
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>o o<Esc>

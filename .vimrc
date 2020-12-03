@@ -37,6 +37,8 @@ function! s:show_documentation()
     call CocActionAsync('doHover')
   endif
 endfunction
+" let coc start without warning on older vim versions
+let g:coc_disable_startup_warning = 1
 
 " Easier writing/quitting
 nnoremap <Leader>w :w<CR>

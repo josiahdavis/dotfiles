@@ -14,10 +14,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'machakann/vim-highlightedyank'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
 set shell=/bin/zsh
+
+" Markdown preview
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " Setting the leader
 let mapleader="\<Space>"

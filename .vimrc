@@ -28,6 +28,13 @@ let mapleader="\<Space>"
 
 set rtp+=/usr/local/opt/fzf
 
+" Make cursor always at middle of screen
+augroup VCenterCursor
+au!
+au BufEnter,WinEnter,WinNew,VimResized *,*.*
+\ let &scrolloff=winheight(win_getid())/2
+augroup END
+
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 " Symbol renaming.

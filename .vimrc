@@ -66,6 +66,7 @@ nnoremap <Leader>O O<Esc>
 nnoremap <Leader>o o<Esc>
 
 " Color
+colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -73,7 +74,6 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 syntax enable
-colorscheme gruvbox
 set background=dark
 
 " Apply formatter on save

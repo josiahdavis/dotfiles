@@ -1,5 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
+" Automatically install missing plugins on startup
+if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+    autocmd VimEnter * PlugInstall | q
+endif
+
 Plug 'Chiel92/vim-autoformat'
 Plug 'tmhedberg/SimpylFold'
 Plug 'morhetz/gruvbox'

@@ -1,4 +1,12 @@
-call plug#begin('~/.vim/plugged')
+" Auto install vim-plug
+if empty(glob("$VIM/autoload/plug.vim"))
+    silent !curl -sfLo $VIM/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
+endif
+
+
+call plug#begin()
 
 " Automatically install missing plugins on startup
 if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))

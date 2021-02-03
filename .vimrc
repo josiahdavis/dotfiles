@@ -91,5 +91,5 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 syntax enable
-colorscheme gruvbox
+silent! colorscheme gruvbox
 set background=dark

@@ -81,6 +81,7 @@ set smarttab
 set nowrap
 set colorcolumn=88
 set cursorline
+set t_Co=256
 
 " Color
 let g:gruvbox_contrast_dark = 'hard'

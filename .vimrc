@@ -69,7 +69,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>r :so %<CR>
-nnoremap <Leader>e :e<CR>
+nnoremap <Leader>e :e!<CR>
 
 " Copy to the system clipboard
 vnoremap <Leader>y "+y

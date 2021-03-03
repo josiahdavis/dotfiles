@@ -136,7 +136,7 @@ vnoremap K :m '<-2<CR>gv=gv
 "nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
 set hlsearch
-set incsearch
+" set incsearch
 
 " `<Tab>`/`<S-Tab>` to move between matches without leaving incremental search.
 " Note dependency on `'wildcharm'` being set to `<C-z>` in order for this to

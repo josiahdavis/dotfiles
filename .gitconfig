@@ -6,11 +6,5 @@
 [init]
 	templatedir = ~/.git_template
 [alias]
-    co = checkout
     st = status
-	ctags = !.git/hooks/ctags
-
-    lol = log --oneline --graph --decorate
-    lola = log --oneline --graph --decorate --all
-    lols = log --oneline --graph --decorate --all --max-count=10
-    lolf = log --oneline --graph --decorate dev..
+    lol = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative

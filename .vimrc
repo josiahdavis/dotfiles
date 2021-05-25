@@ -41,13 +41,6 @@ let mapleader="\<Space>"
 
 set rtp+=/usr/local/opt/fzf
 
-" Make cursor always at middle of screen
-augroup VCenterCursor
-au!
-au BufEnter,WinEnter,WinNew,VimResized *,*.*
-\ let &scrolloff=winheight(win_getid())/2
-augroup END
-
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 " Symbol renaming.
@@ -163,13 +156,13 @@ set ruler
 set viminfo='20,<1000 " inc copy/paste-buffer
 set tags=./.git/tags; " where to find ctags normally
 set tags+=tags;/      " where to find ctags in ad-hoc package exploration
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab " Convert from tab char to spaces
 set noerrorbells
 set visualbell
 set t_vb=
 set smarttab
 set nowrap
-set colorcolumn=88
+set colorcolumn=120
 set cursorline

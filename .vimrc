@@ -72,7 +72,7 @@ nnoremap <Leader>O O<Esc>
 nnoremap <Leader>o o<Esc>
 
 " Color
-colorscheme gruvbox
+silent! colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -92,8 +92,6 @@ let g:autoformat_remove_trailing_spaces = 0
 
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
-" nnoremap <Tab> za
-" nnoremap <expr> <S-CR> &foldlevel ? 'zM' :'zR'
 
 " Use black formatter
 let g:formatters_python=['black']

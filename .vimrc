@@ -1,17 +1,4 @@
-" Auto install vim-plug
-if empty(glob("$VIM/autoload/plug.vim"))
-    silent !curl -sfLo $VIM/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall
-endif
-
-
 call plug#begin()
-
-" Automatically install missing plugins on startup
-if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-    autocmd VimEnter * PlugInstall | q
-endif
 
 Plug 'Chiel92/vim-autoformat'
 Plug 'tmhedberg/SimpylFold'
@@ -92,6 +79,8 @@ let g:autoformat_remove_trailing_spaces = 0
 
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
+" nnoremap <Tab> za
+" nnoremap <expr> <S-CR> &foldlevel ? 'zM' :'zR'
 
 " Use black formatter
 let g:formatters_python=['black']

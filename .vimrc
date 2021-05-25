@@ -79,8 +79,6 @@ let g:autoformat_remove_trailing_spaces = 0
 
 " Use better code folding
 let g:SimpylFold_docstring_preview = 1
-" nnoremap <Tab> za
-" nnoremap <expr> <S-CR> &foldlevel ? 'zM' :'zR'
 
 " Use black formatter
 let g:formatters_python=['black']
@@ -113,10 +111,9 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Searching within a file
-"nnoremap <CR> :nohlsearch<CR><CR>
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
 set hlsearch
-" set incsearch
+set incsearch
 
 " `<Tab>`/`<S-Tab>` to move between matches without leaving incremental search.
 " Note dependency on `'wildcharm'` being set to `<C-z>` in order for this to

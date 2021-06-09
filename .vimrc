@@ -6,12 +6,9 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'zxqfl/tabnine-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'machakann/vim-highlightedyank'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -27,22 +24,6 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 let mapleader="\<Space>"
 
 set rtp+=/usr/local/opt/fzf
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-" Symbol renaming.
-nmap <Leader>rn <Plug>(coc-rename)
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocActionAsync('doHover')
-  endif
-endfunction
-" let coc start without warning on older vim versions
-let g:coc_disable_startup_warning = 1
 
 " Easier writing/quitting
 nnoremap <Leader>w :w<CR>
@@ -114,12 +95,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
 set hlsearch
 set incsearch
-
-" `<Tab>`/`<S-Tab>` to move between matches without leaving incremental search.
-" Note dependency on `'wildcharm'` being set to `<C-z>` in order for this to
-" work.
-cnoremap <expr> <Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>/<C-r>/' : '<C-z>'
-cnoremap <expr> <S-Tab> getcmdtype() == '/' \|\| getcmdtype() == '?' ? '<CR>?<C-r>/' : '<S-Tab>'
 
 " Searching for a file
 nnoremap <C-f> :Files<Cr>

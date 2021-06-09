@@ -25,3 +25,9 @@ largest(){
 untar(){
   tar zxvf $1 -C $2
 }
+
+# Example:
+# mkv2mp4 f1.mkv f2.mp4
+mkv2mp4(){
+  ffmpeg -i $1 -codec copy $2
+}
